@@ -9,14 +9,15 @@ package main
 
 import (
 	"fmt"
-	"module/helper" /// _ "module/helper"
 )
 
 func main() {
 	fmt.Println("Hello golang world!!!")
 
+	core()
+
 	//exported
-	helper.Help()
+	//helper.Help()
 
 	//unexported
 	//helper.elp()
