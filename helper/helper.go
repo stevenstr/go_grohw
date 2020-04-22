@@ -15,5 +15,13 @@ func Help() {
 }
 
 func init() {
-	fmt.Println("initialisation")
+	fmt.Println("initialisation1")
+}
+
+func init() {
+	fmt.Println("initialisation2")
+}
+
+func init() {
+	fmt.Println("initialisation3")
 }
