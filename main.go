@@ -1,7 +1,7 @@
 /*
 * Author: Stefan
 * Craete: 04.22.2020 11:25
-* Last changes:04.22.2020 12:08
+* Last changes:04.22.2020 12:23
 * Task: Class Work Lec1-2
  */
 
