@@ -1,7 +1,7 @@
-package main
+package helper
 
 import "fmt"
 
-func core() {
+func Core() {
 	fmt.Println("It is core!")
 }
