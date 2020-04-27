@@ -6,7 +6,7 @@
 			"type": "go",
 			"request": "launch",
 			"mode": "auto",
-			"program": "/home/stefan/go/src/github.com/stevenstr/go_grohw/main.go",
+			"program": "/home/stefan/go/src/github.com/stevenstr/go_grohw/Pizzeria/main.go",
 			"env": {},
 			"args": []
 		}
