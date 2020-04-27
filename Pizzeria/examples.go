@@ -1,28 +1,33 @@
+/*
+* Authod: Stefan
+* Created: 04.27.2020
+* Last changes: 04.27.2020 22:30
+* Task: Class Work Lec3
+ */
+
 package main
 
-import "fmt"
-
-func examples() {
+func examples() { //examples
 	//ex 1 Variables definition
+	/*
+		var pizza string = "Marharita"
 
-	var pizza string = "Marharita"
+		fmt.Println("Value: " + pizza)
+		fmt.Println(pizza)
+		fmt.Printf("value: %v | type: %T \n\r\n", pizza, pizza)
 
-	fmt.Println("Value: " + pizza)
-	fmt.Println(pizza)
-	fmt.Printf("value: %v | type: %T \n\r\n", pizza, pizza)
+		var pizza1 string
+		pizza1 = "Peperoni"
 
-	var pizza1 string
-	pizza1 = "Peperoni"
+		fmt.Println("Value: " + pizza1)
+		fmt.Println(pizza1)
+		fmt.Printf("value: %v | type: %T \n\r\n", pizza1, pizza1)
 
-	fmt.Println("Value: " + pizza1)
-	fmt.Println(pizza1)
-	fmt.Printf("value: %v | type: %T \n\r\n", pizza1, pizza1)
-
-	pizza2 := "Mashed"
-	fmt.Println("Value: " + pizza2)
-	fmt.Println(pizza2)
-	fmt.Printf("value: %v | type: %T \n\r\n", pizza2, pizza2)
-
+		pizza2 := "Mashed"
+		fmt.Println("Value: " + pizza2)
+		fmt.Println(pizza2)
+		fmt.Printf("value: %v | type: %T \n\r\n", pizza2, pizza2)
+	*/
 	// ex 2
 	/*
 		var c, java, python bool
@@ -234,4 +239,100 @@ func examples() {
 		}
 		fmt.Println("From string", bar, "to int", resint)
 	*/
+
+	//ex 12 Functions
+	/*
+		fmt.Println(add(3, 4))
+		fmt.Println(add(5, 4))
+		fmt.Println(add(1, 4))
+		fmt.Println(add(9, 4))
+	*/
+
+	//ex 13 Functions 1
+	/*
+		fmt.Println(add(3, 4))
+		fmt.Println(add(5, 4))
+		fmt.Println(add(1, 4))
+		fmt.Println(add(9, 4))
+	*/
+
+	//ex 14 Functions 2
+	/*
+		x, y := "world!", "Hello, "
+		a, b := swap(x, y)
+		fmt.Println("Orig:", x, y)
+		fmt.Println("Swaps:", a, b)
+	*/
+
+	//ex 15 Functions 3
+	/*
+		a, _ := swap("a", "b") //b
+		fmt.Println(a)
+
+		_, b := swap("a", "b") //a
+		fmt.Println(b)
+	*/
+
+	//ex 16 Functions 4
+	/*
+		fmt.Println(split(17))
+	*/
+
+	//ex 17 Functions 5 Function as a type
+	/*
+		hypot := func(x, y float64) float64 {
+			return math.Sqrt(x*x + y*y)
+		}
+		fmt.Println(hypot(5, 22))
+
+		fmt.Println(compute(hypot))
+		fmt.Println(compute(math.Pow))
+	*/
+
 }
+
+//ex 12 Functions
+/*
+func add(a, b int) int {
+	return a + b
+}
+*/
+
+//ex 13 Functions 1
+/*
+func add(a, b int) int {
+	return a + b
+}
+*/
+
+//ex 14 Functions 2
+/*
+func swap(x, y string) (string, string) {
+	return y, x
+}
+*/
+
+//ex 15 Functions 3
+/*
+func swap(x, y string) (string, string) {
+	return y, x
+}
+*/
+
+//ex 16 Functions 4
+/*
+func split(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
+}
+*/
+
+//ex 17 Functions 5 Function as a type
+/*
+func compute(fn func(float64, float64) float64) float64 {
+	return fn(3, 4)
+}
+*/
+
+//ex 18 Functions 6 Closure
