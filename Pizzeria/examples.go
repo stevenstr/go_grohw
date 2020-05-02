@@ -1,7 +1,7 @@
 /*
 * Authod: Stefan
 * Created: 04.27.2020
-* Last changes: 05.01.2020 16:47
+* Last changes: 05.02.2020 18:00
 * Task: Class Work Lec3
  */
 
@@ -580,7 +580,67 @@ func examples() { //examples
 		fmt.Println(sl)
 	*/
 
-	//ex 33
+	//ex 33 for
+	/*
+		sum := 0
+		for i := 1; i < 11; i++ {
+			sum += i
+		}
+		fmt.Println(sum)
+	*/
+
+	//ex 34 for
+	/*
+		sum := 1
+		for sum < 1000 {
+			sum += sum
+		}
+		fmt.Println(sum)
+	*/
+
+	//ex 35 for
+	/*
+		for {
+		}
+	*/
+	//ex 36 if-else if-else
+	/*
+		x := 4
+
+		fmt.Scan(&x)
+
+		if x < 3 && x > 0 {
+			fmt.Println("1 2")
+		} else if x == 100 || == 1000 {
+			fmt.Println("100 or 1000")
+		} else {
+			fmt.Println("Unknown value")
+		}
+	*/
+
+	//ex 37 if-else if-else
+	/*
+		hell := 3.1
+		if pi := math.Pi; pi < hell {
+			fmt.Println("God alive")
+		} else {
+			fmt.Println("Broke your mind")
+		}
+		//here pi from if can't be called!!!
+	*/
+
+	//ex 38 switch/case
+	/*
+		fmt.Println("Golang runs on ")
+		switch os := runtime.GOOS; os {
+		case "darwin":
+			fmt.Println("OS X")
+		case "linux":
+			fmt.Println("GNU/LINUX")
+		default:
+			fmt.Printf("%s\n\r\n", os)
+		}
+	*/
 }
 
 //ex 12 Functions
