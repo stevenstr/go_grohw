@@ -1,7 +1,7 @@
 /*
 * Authod: Stefan
 * Created: 04.27.2020
-* Last changes: 05.02.2020 17:45
+* Last changes: 05.02.2020 17:26
 * Task: Class Work Lec3 Project
  */
 
@@ -14,6 +14,8 @@ import (
 func main() {
 	pizzas := []string{newPizza(), "Cheese"}
 	pizzas = append(pizzas, "Peperoni")
+	pizzas = append(pizzas, "Vegan")
+	pizzas = append(pizzas, "GolangPizza")
 
 	for index, pizza := range pizzas {
 		fmt.Println(index, pizza)
