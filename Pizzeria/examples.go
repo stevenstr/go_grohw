@@ -1,7 +1,7 @@
 /*
 * Authod: Stefan
 * Created: 04.27.2020
-* Last changes: 04.27.2020 22:30
+* Last changes: 05.01.2020 16:47
 * Task: Class Work Lec3
  */
 
@@ -289,6 +289,298 @@ func examples() { //examples
 		fmt.Println(compute(math.Pow))
 	*/
 
+	//ex 18 Closure
+	/*
+		pos, neg := adder(), adder()
+		for i := 0; i < 10; i++ {
+			fmt.Println(
+				pos(i),
+				neg(-2*i),
+			)
+		}
+	*/
+
+	//ex 19 Array
+	/*
+		var a [5]int
+		var b = [5]int{1, 2, 3, 4, 5}
+		fmt.Println(a)
+		fmt.Println(b)
+
+		c := [4]int{1, 2, 3, 4}
+		fmt.Println(c)
+
+		foo := [2]string{"Hello,", "world!"}
+		fmt.Println(foo, foo[0], foo[1])
+
+		var bar [2]string
+		fmt.Println(bar)
+
+		bar[0] = "Golang it's"
+		bar[1] = "my life..."
+		fmt.Println(bar)
+		fmt.Println(bar[0])
+		fmt.Println(bar[1])
+	*/
+
+	//ex 20 Slice
+	/*
+		var sl []int
+		var sl1 = []int{1, 2}
+		var sl2 = []int{}
+		sl3 := []int{1, 2, 3}
+
+		fmt.Println(sl)
+		fmt.Println("sl is nil?", sl == nil)
+		fmt.Println(sl1)
+		fmt.Println("sl1 is nil?", sl1 == nil)
+		fmt.Println(sl2)
+		fmt.Println("sl2 is nil?", sl2 == nil)
+		fmt.Println(sl3)
+		fmt.Println("sl3 is nil?", sl3 == nil)
+	*/
+
+	//ex 21 Slice 1
+	/*
+		arr := [5]int{1, 2, 3, 4, 5}
+		fmt.Println("arr:", arr)
+		fmt.Printf("type: %T | len: %v\n\r\n", arr, len(arr))
+
+		sl := arr[:] //1, 2, 3, 4, 5
+		fmt.Println("sl:", sl)
+		fmt.Printf("type: %T | len: %v | cap: %v\n\r\n", sl, len(sl), cap(sl))
+
+		sl1 := arr[1:4] //2, 3, 4
+		fmt.Println("sl1", sl1)
+		fmt.Printf("type: %T | len: %v | cap: %v\n\r\n", sl1, len(sl1), cap(sl1))
+
+		sl1 = append(sl1, 1)
+		fmt.Println("sl1", sl1)
+		fmt.Printf("type: %T | len: %v | cap: %v\n\r\n", sl1, len(sl1), cap(sl1))
+		fmt.Println("sl:", sl)
+		fmt.Println("arr:", arr)
+	*/
+
+	//ex 22 Slice 2
+	/*
+		arr := [7]int{0, 1, 2, 3, 4, 5, 6}
+		fmt.Println("arr:", arr, len(arr))
+
+		sl := arr[1:5]
+		fmt.Println("arr:", arr, len(arr))
+		fmt.Println("sl:", sl, len(sl), cap(sl))
+		fmt.Println()
+
+		sl = sl[:cap(sl)]
+		fmt.Println("arr:", arr, len(arr))
+		fmt.Println("sl:", sl, len(sl), cap(sl))
+		fmt.Println()
+	*/
+
+	//ex 23 Slice 3
+	/*
+		nam := []string{
+			"Ivan",
+			"Kolya",
+			"Lesha",
+			"Sergio",
+		}
+
+		sl1 := nam[1:4]
+		sl2 := nam[0:3]
+		sl3 := nam[2:4]
+
+		fmt.Printf("arr: %v | type: %T | len: %v \n\r\n", nam, nam, len(nam))
+		fmt.Printf("sl1: %v | type: %T | len: %v | cap: %v\n\r\n", sl1, sl1, len(sl1), cap(sl1))
+		fmt.Printf("sl2: %v | type: %T | len: %v | cap: %v\n\r\n", sl2, sl2, len(sl2), cap(sl2))
+		fmt.Printf("sl3: %v | type: %T | len: %v | cap: %v\n\r\n", sl3, sl3, len(sl3), cap(sl3))
+
+		fmt.Println("==================================================")
+		sl2[1] = "Junk" //side effect because cap has not reached its limit
+
+		fmt.Printf("arr: %v | type: %T | len: %v \n\r\n", nam, nam, len(nam))
+		fmt.Printf("sl1: %v | type: %T | len: %v | cap: %v\n\r\n", sl1, sl1, len(sl1), cap(sl1))
+		fmt.Printf("sl2: %v | type: %T | len: %v | cap: %v\n\r\n", sl2, sl2, len(sl2), cap(sl2))
+		fmt.Printf("sl3: %v | type: %T | len: %v | cap: %v\n\r\n", sl3, sl3, len(sl3), cap(sl3))
+
+		sl2 = append(sl2, "Junk1", "Junk2", "Junk3")
+		fmt.Println("==================================================")
+		//cap was reached and overreached, and sl2 is NEW
+
+		fmt.Printf("arr: %v | type: %T | len: %v \n\r\n", nam, nam, len(nam))
+		fmt.Printf("sl1: %v | type: %T | len: %v | cap: %v\n\r\n", sl1, sl1, len(sl1), cap(sl1))
+		fmt.Printf("sl2: %v | type: %T | len: %v | cap: %v\n\r\n", sl2, sl2, len(sl2), cap(sl2))
+		fmt.Printf("sl3: %v | type: %T | len: %v | cap: %v\n\r\n", sl3, sl3, len(sl3), cap(sl3))
+
+		fmt.Println("==================================================")
+	*/
+
+	//ex 24 Slice 4
+	/*
+		q := []int{2, 3, 5, 7, 11, 13}
+		fmt.Println(q)
+
+		r := []bool{true, false, true, true, false, true}
+		fmt.Println(r)
+
+		s := []struct {
+			i int
+			b bool
+		}{
+			{2, true},
+			{3, false},
+			{5, true},
+			{7, true},
+			{11, false},
+			{13, true},
+		}
+		fmt.Println(s)
+	*/
+
+	//ex 25 Slice 5
+	/*
+		s := []int{3, 5, 7, 9, 11}
+		fmt.Println(s, len(s), cap(s))
+		s = s[1:4]
+		fmt.Println(s, len(s), cap(s))
+		s = s[:2]
+		fmt.Println(s, len(s), cap(s))
+		s = s[1:]
+		fmt.Println(s, len(s), cap(s))
+	*/
+
+	//ex 26 Slice 6 Len Cap Grows
+	/*
+		sl := []int{}
+
+		for i := 0; i < 45; i++ {
+			fmt.Printf("len: %v | cap: %v\n\r", len(sl), cap(sl))
+			sl = append(sl, i)
+		}
+	*/
+
+	//ex 27 Sclice 7
+	/*
+		sl := []int{1, 3, 4, 5, 6, 7, 5}
+		fmt.Printf("len: %v | cap: %v\n\r", len(sl), cap(sl))
+		fmt.Println("Growing...")
+		sl = sl[:0]
+		fmt.Printf("len: %v | cap: %v\n\r", len(sl), cap(sl))
+		fmt.Println("Growing...")
+		sl = sl[:4]
+		fmt.Printf("len: %v | cap: %v\n\r", len(sl), cap(sl))
+		fmt.Println("Growing...")
+		sl = sl[:7]
+		fmt.Printf("len: %v | cap: %v\n\r", len(sl), cap(sl))
+
+		fmt.Println("Cut caps...")
+		sl = sl[2:]
+		fmt.Printf("len: %v | cap: %v\n\r", len(sl), cap(sl))
+		fmt.Println("Cut caps...")
+		sl = sl[2:]
+		fmt.Printf("len: %v | cap: %v\n\r", len(sl), cap(sl))
+	*/
+
+	//ex 28 Slice 8 Nil
+	/*
+		var s []int
+		if s == nil {
+			fmt.Println("Is nil!")
+		}
+
+		var s1 = []int{}
+		if s1 == nil {
+			fmt.Println("Is nil!")
+		} else {
+			fmt.Println("Not nil!")
+		}
+	*/
+
+	//ex 29 Slice 9 make
+	/*
+		a := make([]int, 5)
+
+		if a == nil {
+			fmt.Println("Is nil!")
+		} else {
+			fmt.Println("Not nil!")
+		}
+
+		b := make([]int, 0)
+
+		if b == nil {
+			fmt.Println("Is nil!")
+		} else {
+			fmt.Println("Not nil!")
+		}
+
+		c := make([]int, 4, 10)
+
+		if c == nil {
+			fmt.Println("Is nil!")
+		} else {
+			fmt.Println("Not nil!")
+		}
+
+		fmt.Println(a, b, c)
+	*/
+
+	//ex 30 Slice 10 New
+	/*
+		sl := new([]int)
+		if sl == nil {
+			fmt.Println("Is nil!")
+		} else {
+			fmt.Println("Not nil!")
+		}
+		fmt.Println(sl)
+	*/
+
+	//31 Slice 11 Multy slices
+	/*
+		brd := [][]string{
+			[]string{"_", "_", "_"},
+			[]string{"_", "_", "_"},
+			[]string{"_", "_", "_"},
+		}
+
+		fmt.Println()
+		for i := 0; i < len(brd); i++ {
+			for j := 0; j < len(brd); j++ {
+				fmt.Print(brd[i][j], " ")
+			}
+			fmt.Println()
+		}
+
+		brd[0][0] = "X"
+		brd[2][1] = "O"
+		brd[0][1] = "X"
+		brd[0][2] = "O"
+		brd[1][0] = "X"
+		brd[2][0] = "O"
+		fmt.Println()
+
+		for i := 0; i < len(brd); i++ {
+			for j := 0; j < len(brd); j++ {
+				fmt.Print(brd[i][j], " ")
+			}
+			fmt.Println()
+		}
+	*/
+
+	//ex 32 Slice 12 Append
+	/*
+		sl := []int{1, 2, 3}
+		fmt.Println(sl)
+		sl2 := []int{11, 22, 33}
+		fmt.Println(sl2)
+		sl = append(sl, 4, 5)
+		fmt.Println(sl)
+		sl = append(sl, sl2...)
+		fmt.Println(sl)
+	*/
+
+	//ex 33
 }
 
 //ex 12 Functions
@@ -336,3 +628,12 @@ func compute(fn func(float64, float64) float64) float64 {
 */
 
 //ex 18 Functions 6 Closure
+/*
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+*/
