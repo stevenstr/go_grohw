@@ -1,7 +1,7 @@
 /*
 * Authod: Stefan
 * Created: 04.27.2020
-* Last changes: 04.27.2020 22:30
+* Last changes: 05.02.2020 17:45
 * Task: Class Work Lec3 Project
  */
 
@@ -12,14 +12,20 @@ import (
 )
 
 func main() {
-	pizza := newPizza()
-	fmt.Println(pizza)
+	pizzas := []string{newPizza(), "Cheese"}
+	pizzas = append(pizzas, "Peperoni")
+
+	for index, pizza := range pizzas {
+		fmt.Println(index, pizza)
+	}
 }
 
+//add first pizzas
 func newPizza() string {
 	return "Margherita"
 }
 
+//init function - send you the version of project
 func init() {
-	fmt.Printf("Project: Pizzeria\nVersion: 0.1\nLec-3\n\r\n")
+	fmt.Printf("Project: Pizzeria\nVersion: 0.2\nLec-3\n\r\n")
 }
