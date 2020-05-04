@@ -1,7 +1,7 @@
 /*
 * Authod: Stefan
 * Created: 04.27.2020
-* Last changes: 05.04.2020 18:00
+* Last changes: 05.04.2020 20:50
 * Task: Class Work Lec4 Project
  */
 
@@ -13,14 +13,13 @@ import (
 )
 
 func main() {
+	//pizzas now is variable of Stock type
 	pizzas := domain.Stock{newPizza(), "Cheese"}
 	pizzas = append(pizzas, "Peperoni")
 	pizzas = append(pizzas, "Vegan")
 	pizzas = append(pizzas, "GolangPizza")
-
-	for index, pizza := range pizzas {
-		fmt.Println(index, pizza)
-	}
+	//and because we can call print method!
+	pizzas.Print()
 }
 
 //add first pizzas
