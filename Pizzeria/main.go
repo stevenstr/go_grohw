@@ -9,10 +9,11 @@ package main
 
 import (
 	"fmt"
+	"pizzeria/domain"
 )
 
 func main() {
-	pizzas := []string{newPizza(), "Cheese"}
+	pizzas := domain.Stock{newPizza(), "Cheese"}
 	pizzas = append(pizzas, "Peperoni")
 	pizzas = append(pizzas, "Vegan")
 	pizzas = append(pizzas, "GolangPizza")
@@ -29,5 +30,5 @@ func newPizza() string {
 
 //init function - send you the version of project
 func init() {
-	fmt.Printf("Project: Pizzeria\nVersion: 0.2\nLec-3\n\r\n")
+	fmt.Printf("Project: Pizzeria\nVersion: 0.3\nLec-4\n\r\n")
 }

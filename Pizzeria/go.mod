@@ -1,3 +1,3 @@
-module module
+module pizzeria
 
 go 1.14
