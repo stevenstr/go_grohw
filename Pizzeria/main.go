@@ -1,8 +1,8 @@
 /*
 * Authod: Stefan
 * Created: 04.27.2020
-* Last changes: 05.02.2020 17:26
-* Task: Class Work Lec3 Project
+* Last changes: 05.04.2020 18:00
+* Task: Class Work Lec4 Project
  */
 
 package main
