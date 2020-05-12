@@ -24,11 +24,8 @@ func main() {
 	//and because we can call print method!
 	pizzas.Print()
 
-	//run Sort method
-	pizzas.Sort()
-
-	//print sorted
-	pizzas.Print()
+	//run Sort and Print method using Chaining
+	pizzas.Sort().Print()
 
 	pizzas.SaveToFile("my_stock.txt")
 }
