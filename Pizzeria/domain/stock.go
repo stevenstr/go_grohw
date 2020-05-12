@@ -1,7 +1,7 @@
 /*
 * Authod: Stefan
 * Created: 05.04.2020
-* Last changes: 05.12.2020 20:12
+* Last changes: 05.12.2020 20:42
 * Task: Class Work Lec4 Project
 * This package for stock types
  */
@@ -46,4 +46,9 @@ func NewStock() Stock {
 	}
 
 	return stock
+}
+
+//GetPackage function -
+func GetPackage(s Stock, pkgSize int) (Stock, Stock) {
+	return s[:pkgSize], s[pkgSize:]
 }
