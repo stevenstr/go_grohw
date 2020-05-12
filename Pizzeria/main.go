@@ -32,5 +32,5 @@ func main() {
 
 //init function - send you the version of project
 func init() {
-	fmt.Printf("Project: Pizzeria\nVersion: 0.42\nLec-4\n\r\n")
+	fmt.Printf("Project: Pizzeria\nVersion: 1\nLec-4\n\r\n")
 }
