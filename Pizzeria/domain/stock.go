@@ -1,14 +1,17 @@
 /*
 * Authod: Stefan
 * Created: 05.04.2020
-* Last changes: 05.12.2020 20:42
+* Last changes: 05.12.2020 21:48
 * Task: Class Work Lec4 Project
 * This package for stock types
  */
 
 package domain
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 //Stock type
 type Stock []string
@@ -51,4 +54,10 @@ func NewStock() Stock {
 //GetPackage function -
 func GetPackage(s Stock, pkgSize int) (Stock, Stock) {
 	return s[:pkgSize], s[pkgSize:]
+}
+
+//ToString function - convert object has type Stock to simple string from separator
+func (s Stock) ToString() string {
+	slstring := []string(s)
+	return strings.Join(slstring, ",")
 }

@@ -1,11 +1,15 @@
 /*
 * Authod: Stefan
 * Created: 05.04.2020
-* Last changes: 05.04.2020 18:44
+* Last changes: 05.12.2020 21:40
 * Task: Class Work Lec4 OOP in Go
  */
 
 package main
+
+import (
+	"fmt"
+)
 
 func examples() { //examples
 
@@ -142,7 +146,10 @@ func examples() { //examples
 		fmt.Println("done")
 	*/
 
-	//ex 13
+	//ex 13 slice byte
+
+	sl := []byte("Hello")
+	fmt.Println(sl)
 }
 
 //ex 7
