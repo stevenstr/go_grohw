@@ -1,7 +1,7 @@
 /*
 * Authod: Stefan
 * Created: 04.27.2020
-* Last changes: 05.12.2020 22:25
+* Last changes: 05.12.2020 23:13
 * Task: Class Work Lec4 Project
  */
 
@@ -18,15 +18,19 @@ func main() {
 
 	pizzas := domain.NewStockFromFile("firstresults.txt")
 
-	pkg, _ := domain.GetPackage(pizzas, 10)
-
-	pkg.Print()
+	//pkg, _ := domain.GetPackage(pizzas, 10)
+	//pkg.Print()
 	//remeiningStock.Print()
 	//and because we can call print method!
 	pizzas.Print()
 
-	pizzas.SaveToFile("my_stock.txt")
+	//run Sort method
+	pizzas.Sort()
 
+	//print sorted
+	pizzas.Print()
+
+	pizzas.SaveToFile("my_stock.txt")
 }
 
 //init function - send you the version of project

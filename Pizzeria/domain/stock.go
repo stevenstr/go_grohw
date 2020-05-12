@@ -1,7 +1,7 @@
 /*
 * Authod: Stefan
 * Created: 05.04.2020
-* Last changes: 05.12.2020 22:45
+* Last changes: 05.12.2020 23:10
 * Task: Class Work Lec4 Project
 * This package for stock types
  */
@@ -12,6 +12,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"sort"
 	"strings"
 )
 
@@ -94,4 +95,11 @@ func NewStockFromFile(filename string) Stock {
 
 	//convert []string to Stock and return it
 	return Stock(slstring)
+}
+
+//Sort functin - method which return sorted Stock
+func (s Stock) Sort() Stock {
+	slstr := []string(s)
+	sort.Strings(slstr)
+	return Stock(slstr)
 }
