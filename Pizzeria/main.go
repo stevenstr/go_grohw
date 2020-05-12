@@ -1,7 +1,7 @@
 /*
 * Authod: Stefan
 * Created: 04.27.2020
-* Last changes: 05.12.2020 21:48
+* Last changes: 05.12.2020 22:02
 * Task: Class Work Lec4 Project
  */
 
@@ -23,12 +23,11 @@ func main() {
 	//and because we can call print method!
 	pizzas.Print()
 
-	//
-	fmt.Println(pkg.ToString())
+	pizzas.SaveToFile("firstresults.txt")
 
 }
 
 //init function - send you the version of project
 func init() {
-	fmt.Printf("Project: Pizzeria\nVersion: 0.41\nLec-4\n\r\n")
+	fmt.Printf("Project: Pizzeria\nVersion: 0.42\nLec-4\n\r\n")
 }
