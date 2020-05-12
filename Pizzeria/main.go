@@ -1,7 +1,7 @@
 /*
 * Authod: Stefan
 * Created: 04.27.2020
-* Last changes: 05.12.2020 22:02
+* Last changes: 05.12.2020 22:25
 * Task: Class Work Lec4 Project
  */
 
@@ -14,7 +14,9 @@ import (
 
 func main() {
 	//pizzas now is get value of our constructor
-	pizzas := domain.NewStock()
+	//pizzas := domain.NewStock()
+
+	pizzas := domain.NewStockFromFile("firstresults.txt")
 
 	pkg, _ := domain.GetPackage(pizzas, 10)
 
@@ -23,7 +25,7 @@ func main() {
 	//and because we can call print method!
 	pizzas.Print()
 
-	pizzas.SaveToFile("firstresults.txt")
+	pizzas.SaveToFile("my_stock.txt")
 
 }
 
